@@ -11,39 +11,31 @@
 
 
 
-<!-- PROJECT LOGO -->
+<!-- PROJECT LOGOS -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
     <img src="images/speedtest.png" alt="Logo" width="70" height="80">
   </a>
 &nbsp;
 &nbsp;
 &nbsp;
-  <a href="https://github.com/github_username/repo_name">
     <img src="images/grafana.png" alt="Logo" width="80" height="80">
   </a>
 &nbsp;
 &nbsp;
 &nbsp;  
-  <a href="https://github.com/github_username/repo_name">
     <img src="images/docker.png" alt="Logo" width="80" height="80">
   </a>
 
 
-  <h3 align="center">speedtest monitor</h3>
+  <h1 align="center">speedtest monitor</h1>
 
   <p align="center">
-    project_description
+    Speedtest based monitor in Grafana.  
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/rosekrans/speedtest-monitor/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/rosekrans/speedtest-monitor/issues">Request Feature</a>
   </p>
 </p>
 
@@ -76,64 +68,57 @@
 </details>
 
 
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
-
-
-### Built With
-
-* []()
-* []()
-* []()
-
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
 
-### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+### Environmental file
+Create a .env file in the project root directory.
+```
+# Grafana
+GF_SECURITY_ADMIN_USER=adminuser
+GF_SECURITY_ADMIN_PASSWORD=adminpass
+GF_USERS_DEFAULT_THEME=dark
+GF_USERS_ALLOW_SIGN_UP=false
+GF_USERS_ALLOW_ORG_CREATE=false
+GF_AUTH_ANONYMOUS_ENABLED=true
+
+# Speedtest
+DB_ADDRESS=influxdb
+DB_PORT=8086
+DB_USER=user
+DB_PASSWORD=foobar
+DB_DATABASE=network_latency
+```
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/rosekrans/speedtest-monitor.git
    ```
-2. Install NPM packages
-   ```sh
-   npm install
+2. Run docker-compose
    ```
+   docker-compose up -d
+   ```
+3. http://localhost:3000  example URL
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Currently this project only works on Rasberry Pi.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/rosekrans/speedtest-monitor/issues) for a list of proposed features (and known issues).
 
 
 
@@ -160,38 +145,27 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
-
+Vulco Viljoen
+<br />
+<a href="https://github.com/github_username/repo_name">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/240px-LinkedIn_logo_initials.png" alt="Logo" width="30" height="30"></a>
+<a href="https://twitter.com/Deagra">
+<img src="https://logos-world.net/wp-content/uploads/2020/04/Twitter-Logo-700x394.png" alt="Logo" width="50" height="30"></a>
+<br />
+https://vulcoviljoen.com
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/rosekrans/speedtest-monitor.svg?style=for-the-badge
+[contributors-url]: https://github.com/rosekrans/speedtest-monitor/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/rosekrans/speedtest-monitor.svg?style=for-the-badge
+[forks-url]: https://github.com/rosekrans/speedtest-monitor/network/members
+[stars-shield]: https://img.shields.io/github/stars/rosekrans/speedtest-monitor.svg?style=for-the-badge
+[stars-url]: https://github.com/rosekrans/speedtest-monitor/stargazers
+[issues-shield]: https://img.shields.io/github/issues/rosekrans/speedtest-monitor.svg?style=for-the-badge
+[issues-url]: https://github.com/rosekrans/speedtest-monitor/issues
+[license-shield]: https://img.shields.io/github/license/rosekrans/speedtest-monitor.svg?style=for-the-badge
+[license-url]: https://github.com/rosekrans/speedtest-monitor/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/vulco-viljoen
-
-
-# hovel-network
-Home internet monitoring.

@@ -14,15 +14,23 @@ COPY requirements.txt /
 COPY requirements.txt /app
 
 RUN apt-get update && \
+#    apt-get dist-upgrade -y && \
+#    apt-get -q -y install --no-install-recommends apt-utils gnupg1 apt-transport-https dirmngr && \
+#    apt-get install curl &&\
+#    curl -s https://install.speedtest.net/app/cli/install.deb.sh | bash &&\
+#    apt-get install speedtest &&\
+#    apt-get -q -y autoremove && \
+#    apt-get -q -y clean && \
+#    rm -rf /var/lib/apt/lists/* 
     apt-get dist-upgrade -y && \
     apt-get -q -y install --no-install-recommends apt-utils gnupg1 apt-transport-https dirmngr && \
-    apt-get install curl &&\
-    curl -s https://install.speedtest.net/app/cli/install.deb.sh | bash &&\
-    apt-get install speedtest &&\
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61 && \
+    echo "deb https://ookla.bintray.com/debian buster main" | tee  /etc/apt/sources.list.d/speedtest.list && \
+    apt-get update && apt-get -q -y install speedtest && \
     apt-get -q -y autoremove && \
     apt-get -q -y clean && \
-    rm -rf /var/lib/apt/lists/* 
-
+    rm -rf /var/lib/apt/lists/* && \
+    pip3 install -r /requirements.txt 
     
 RUN pip3 install -r requirements.txt
 
