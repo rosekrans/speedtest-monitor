@@ -145,13 +145,15 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Vulco Viljoen
-<br />
+#### Vulco Viljoen
+
 <a href="https://github.com/github_username/repo_name">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/240px-LinkedIn_logo_initials.png" alt="Logo" width="30" height="30"></a>
+&nbsp;
 <a href="https://twitter.com/Deagra">
 <img src="https://logos-world.net/wp-content/uploads/2020/04/Twitter-Logo-700x394.png" alt="Logo" width="50" height="30"></a>
 <br />
+
 https://vulcoviljoen.com
 
 
